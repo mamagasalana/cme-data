@@ -1,0 +1,7 @@
+*.json
+*.txt
+*.zip
+*.csv
+*.exe
+__pycache__*
+clone chrome profile/*

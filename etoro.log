@@ -1,0 +1,101 @@
+2023-03-22 20:12:49,255 | ERROR | Unhandled exception
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Research\Probability Distribution\CME_DailyBulletin\get_etoro.py", line 118, in <module>
+    f.write(e1.text)
+TypeError: a bytes-like object is required, not 'str'
+2023-03-22 20:13:32,003 | INFO | File exists: etoro_20230322.json
+2023-03-22 20:17:38,925 | INFO | File exists: etoro_20230322.json
+2023-08-17 20:02:34,848 | INFO | File exists: etoro_20230817.json
+2023-09-04 21:56:03,213 | INFO | File exists: etoro_20230904.json
+2023-09-04 22:01:56,841 | INFO | File exists: etoro_20230904.json
+2023-09-13 20:17:11,907 | ERROR | Unhandled exception
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Research\Probability Distribution\CME_DailyBulletin\get_etoro.py", line 178, in <module>
+    e1 = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH, x1)))
+  File "C:\Users\ASUS\anaconda3\lib\site-packages\selenium\webdriver\support\wait.py", line 90, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF67D747862+54818]
+	(No symbol) [0x00007FF67D6B6A92]
+	(No symbol) [0x00007FF67D56DA3B]
+	(No symbol) [0x00007FF67D5AE4FC]
+	(No symbol) [0x00007FF67D5AE67C]
+	(No symbol) [0x00007FF67D5E9627]
+	(No symbol) [0x00007FF67D5CEAEF]
+	(No symbol) [0x00007FF67D5E75A2]
+	(No symbol) [0x00007FF67D5CE883]
+	(No symbol) [0x00007FF67D5A3691]
+	(No symbol) [0x00007FF67D5A48D4]
+	GetHandleVerifier [0x00007FF67DAAB962+3610402]
+	GetHandleVerifier [0x00007FF67DB01830+3962352]
+	GetHandleVerifier [0x00007FF67DAF9D1F+3930847]
+	GetHandleVerifier [0x00007FF67D7E3616+693206]
+	(No symbol) [0x00007FF67D6C15F8]
+	(No symbol) [0x00007FF67D6BD904]
+	(No symbol) [0x00007FF67D6BDA32]
+	(No symbol) [0x00007FF67D6AE0E3]
+	BaseThreadInitThunk [0x00007FFDCE6C7614+20]
+	RtlUserThreadStart [0x00007FFDCFF226B1+33]
+
+2023-09-13 20:22:47,877 | ERROR | Unhandled exception
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Research\Probability Distribution\CME_DailyBulletin\get_etoro.py", line 178, in <module>
+    e1 = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH, x1)))
+  File "C:\Users\ASUS\anaconda3\lib\site-packages\selenium\webdriver\support\wait.py", line 90, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF67D747862+54818]
+	(No symbol) [0x00007FF67D6B6A92]
+	(No symbol) [0x00007FF67D56DA3B]
+	(No symbol) [0x00007FF67D5AE4FC]
+	(No symbol) [0x00007FF67D5AE67C]
+	(No symbol) [0x00007FF67D5E9627]
+	(No symbol) [0x00007FF67D5CEAEF]
+	(No symbol) [0x00007FF67D5E75A2]
+	(No symbol) [0x00007FF67D5CE883]
+	(No symbol) [0x00007FF67D5A3691]
+	(No symbol) [0x00007FF67D5A48D4]
+	GetHandleVerifier [0x00007FF67DAAB962+3610402]
+	GetHandleVerifier [0x00007FF67DB01830+3962352]
+	GetHandleVerifier [0x00007FF67DAF9D1F+3930847]
+	GetHandleVerifier [0x00007FF67D7E3616+693206]
+	(No symbol) [0x00007FF67D6C15F8]
+	(No symbol) [0x00007FF67D6BD904]
+	(No symbol) [0x00007FF67D6BDA32]
+	(No symbol) [0x00007FF67D6AE0E3]
+	BaseThreadInitThunk [0x00007FFDCE6C7614+20]
+	RtlUserThreadStart [0x00007FFDCFF226B1+33]
+
+2024-01-28 20:00:36,999 | ERROR | Unhandled exception
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\Research\Probability Distribution\CME_DailyBulletin\get_etoro.py", line 179, in <module>
+    e1 = WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.XPATH, x1)))
+  File "C:\Users\ASUS\anaconda3\lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF73B464D02+56194]
+	(No symbol) [0x00007FF73B3D04B2]
+	(No symbol) [0x00007FF73B2776AA]
+	(No symbol) [0x00007FF73B2C16D0]
+	(No symbol) [0x00007FF73B2C17EC]
+	(No symbol) [0x00007FF73B304D77]
+	(No symbol) [0x00007FF73B2E5EBF]
+	(No symbol) [0x00007FF73B302786]
+	(No symbol) [0x00007FF73B2E5C23]
+	(No symbol) [0x00007FF73B2B4A45]
+	(No symbol) [0x00007FF73B2B5AD4]
+	GetHandleVerifier [0x00007FF73B7DD5BB+3695675]
+	GetHandleVerifier [0x00007FF73B836197+4059159]
+	GetHandleVerifier [0x00007FF73B82DF63+4025827]
+	GetHandleVerifier [0x00007FF73B4FF029+687785]
+	(No symbol) [0x00007FF73B3DB508]
+	(No symbol) [0x00007FF73B3D7564]
+	(No symbol) [0x00007FF73B3D76E9]
+	(No symbol) [0x00007FF73B3C8094]
+	BaseThreadInitThunk [0x00007FFD22B87344+20]
+	RtlUserThreadStart [0x00007FFD22DC26B1+33]
+
+2024-04-11 20:00:06,210 | INFO | File exists: etoro_20240411.json
