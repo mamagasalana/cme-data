@@ -40,11 +40,12 @@ class GoogleDrive:
                 return file.get('id')
             
             except Exception as e:
+                e2 = e
+                print('Retrying ...')
                 pass
             
             time.sleep(5)
             
-        
-        print(f'An error occurred: {str(e)}')
+        print(f'An error occurred: {str(e2)}')
         file = None
         return

@@ -5,3 +5,4 @@
 *.exe
 __pycache__*
 clone chrome profile/*
+*.log

@@ -12,13 +12,13 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import os
 import logging
-from upload_to_drive import GoogleDrive
+
 import glob
 import re
-import zipfile
+from  zip_pdf import myzip
 
 # Settlement
-gd = GoogleDrive()
+
 logfile = 'cme_settlement.log'
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -60,38 +60,17 @@ try:
         
         r = s.get(url2)
         if r.status_code ==200:
-            print('downloading file')
+            print('downloading file %s' % fname)
             with open(fname, 'wb') as f:
                 f.write(r.content)
-            print('uploading file to google drive')
+            
             myfiles.append(fname)
         else:
             logger.error(f'Date not exists: {fname}')
 
-        datelist  = set([re.findall('\d{8}', fname)[0]  for fname in myfiles])
-        
-        for dt in datelist:
-            file_pattern = dt + '*.txt'
-            files_to_zip = glob.glob(file_pattern)
-            
-            # Define the name of the zip file
-            zip_filename = f'{dt}_files.zip'
-
-            # Create a zip file and add the files to it
-            with zipfile.ZipFile(zip_filename, 'w') as zipf:
-                for file in files_to_zip:
-                    zipf.write(file)
-
-            gd.upload_basic(zip_filename)
+    datelist  = set([re.findall('\d{8}', fname)[0]  for fname in myfiles])
+    myzip(datelist)
 except:
     print("Something wrong, kindly check the logs")
     logger.error('Unhandled exception', exc_info=True)
     input("Press any key to continue")
-    
-
-for filename in myfiles:
-    try:
-        os.remove(filename)
-    except OSError as e:
-        print(f"Error removing file '{filename}': {e}")
-
