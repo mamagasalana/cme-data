@@ -49,7 +49,8 @@ urllist =r.json()['files']
 
 myfiles = []
 
-try: 
+try:
+    urllist2 = []
     for item in urllist:
         url2 = item['url']
         fname = item['fid'] + '.txt'
@@ -57,7 +58,14 @@ try:
         if os.path.exists(fname):
             logger.info(f'File exists: {fname}' )
             continue
-        
+
+        urllist2.append(item)
+
+    print(f'{len(urllist2)} items')
+    for item in urllist2:
+        url2 = item['url']
+        fname = item['fid'] + '.txt'
+
         r = s.get(url2)
         if r.status_code ==200:
             print('downloading file %s' % fname)
