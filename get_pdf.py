@@ -67,9 +67,9 @@ try:
         url2 = item['url']
         fname = item['fid'] + '.txt'
 
-        r = s.get(url2)
         print('downloading file %s' % fname)
         st = time.time()
+        r = s.get(url2)
 
         if r.status_code ==200:
             print('finish downloading file %s' % fname, "| time taken: ",  time.time() - st )   
