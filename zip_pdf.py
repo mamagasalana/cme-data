@@ -2,10 +2,25 @@ import zipfile
 from upload_to_drive import GoogleDrive
 import os
 import glob
+import re
 
 gd = GoogleDrive()
 
-def myzip(datelist):
+def myzip(datelist=None):
+    if datelist is None:
+        datelistpre  = sorted(set([re.findall('\d{8}', fname)[0]  for fname in glob.glob('*STLBASICPLS*')]))
+        datelist = []
+        for dt in datelistpre:
+            cnt = len(glob.glob(f'{dt}*STLBASICPLS*'))
+            if cnt != 27:
+                print(f'{dt} does not have 27 files, please verify')
+                continue
+
+            if os.path.exists(f'{dt}_files.zip'):
+                continue
+
+            datelist.append(dt)
+
     for dt in datelist:
         file_pattern = dt + '*.txt'
         files_to_zip = glob.glob(file_pattern)
@@ -26,8 +41,4 @@ def myzip(datelist):
 if __name__ == '__main__':
     import datetime
 
-    dt = datetime.datetime(2024, 4,19)
-    dt2 = datetime.datetime(2024, 4,25)  
-    delta = dt2 - dt
-    datelist = [ (dt+datetime.timedelta(days=x)).strftime('%Y%m%d') for x in range(delta.days+1)]
-    myzip(datelist)
+    myzip()

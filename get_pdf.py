@@ -16,6 +16,7 @@ import logging
 import glob
 import re
 from  zip_pdf import myzip
+import time
 
 # Settlement
 
@@ -67,8 +68,11 @@ try:
         fname = item['fid'] + '.txt'
 
         r = s.get(url2)
+        print('downloading file %s' % fname)
+        st = time.time()
+
         if r.status_code ==200:
-            print('downloading file %s' % fname)
+            print('finish downloading file %s' % fname, "| time taken: ",  time.time() - st )   
             with open(fname, 'wb') as f:
                 f.write(r.content)
             
@@ -76,8 +80,7 @@ try:
         else:
             logger.error(f'Date not exists: {fname}')
 
-    datelist  = set([re.findall('\d{8}', fname)[0]  for fname in myfiles])
-    myzip(datelist)
+    myzip()
 except:
     print("Something wrong, kindly check the logs")
     logger.error('Unhandled exception', exc_info=True)
